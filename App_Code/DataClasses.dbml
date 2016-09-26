@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="master" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\Projects;Initial Catalog=master;Integrated Security=True;Connect Timeout=30" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="masterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EmployeeL10" Member="EmployeeL10s">
+    <Type Name="EmployeeL10">
+      <Column Name="[Employee ID]" Member="Employee_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Employee Name]" Member="Employee_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="L10" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Email Alias]" Member="Email_Alias" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="[Job Title]" Member="Job_Title" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="[Country Name]" Member="Country_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Manager Name]" Member="Manager_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Manager Employee ID]" Member="Manager_Employee_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Manager Email Alias]" Member="Manager_Email_Alias" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

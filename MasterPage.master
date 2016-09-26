@@ -1,0 +1,103 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" Debug="true" %>
+
+<!DOCTYPE html>
+<!--
+	ACL-WindowsAuthorizationServices
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<link rel="stylesheet" type="text/css" href="Themes/DarkAdmin/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="Themes/DarkAdmin/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="Themes/DarkAdmin/css/local.css" />
+	<link rel="stylesheet" type="text/css" href="Themes/DarkAdmin/css/all.min.css" />
+	<link id="gridcss" rel="stylesheet" type="text/css" href="Themes/DarkAdmin/css/dark-all.min.css" />
+
+	<script type="text/javascript" src="/Themes/DarkAdmin/js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="/Themes/DarkAdmin/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/Themes/DarkAdmin/js/shieldui-all.min.js"></script>
+	<script type="text/javascript" src="/Themes/DarkAdmin/js/gridData.js"></script>
+	<script type="text/javascript" src="/Tools/js/Tools.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Admin Panel</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul id="active" class="nav navbar-nav side-nav">
+					<li id="Main"><a href="/Default.aspx"><i class="fa fa-home"></i> Main Page</a></li>
+					<li id="Tools"><a href="/Tools/Default.aspx"><i class="fa fa-briefcase"></i> Tools</a></li>
+					<li id="PostOS"><a href="/PostOS/Default.aspx"><i class="fa fa-hourglass-half"></i> Post OS</a></li>
+					<li id="ServerLockdown"><a href="/ServerLockdown/Default.aspx"><i class="fa fa-hourglass-end"></i> Server Lockdown</a></li>
+					<li id="CreateSvcAcct"><a href="/CreateSvcAcct/Default.aspx"><i class="fa fa-user-plus"></i> Create SvcAcct</a></li>
+					<li id="SetSvcAcctPassword"><a href="/SetSvcAcctPassword/Default.aspx"><i class="fa fa-user-secret"></i> Set SvcAcct Password</a></li>
+					<li id="CreateADMAccount"><a href="/CreateADMAccount/Default.aspx"><i class="fa fa-plus"></i> Create ADM-Account</a></li>
+					<li id="AddGroupToServer"><a href="/AddGroupToServer/Default.aspx"><i class="fa fa-users"></i> Add Group to Server</a></li>
+					<li id="AddUserToGroup"><a href="/AddUserToGroup/Default.aspx"><i class="fa fa-user-plus"></i> Add User to Group</a></li>
+					<li id="AddUserToTACACSGroup"><a href="/AddUserToTACACSGroup/Default.aspx"><i class="fa fa-user-plus"></i> Add User to TACACS Group</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right navbar-user">
+					<!--
+					<li class="dropdown messages-dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i>Messages <span class="badge">2</span> <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">2 New Messages</li>
+							<li class="message-preview">
+								<a href="#">
+									<span class="avatar"><i class="fa fa-bell"></i></span>
+									<span class="message">Security alert</span>
+								</a>
+							</li>
+							<li class="divider"></li>
+							<li class="message-preview">
+								<a href="#">
+									<span class="avatar"><i class="fa fa-bell"></i></span>
+									<span class="message">Security alert</span>
+								</a>
+							</li>
+							<li class="divider"></li>
+							<li><a href="#">Go to Inbox <span class="badge">2</span></a></li>
+						</ul>
+					</li>
+					-->
+					<li class="dropdown user-dropdown">
+						<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> -->
+						<a href="#">	
+						<i class="fa fa-user"></i>
+						<%=GetFullName("FNFIS\lc43383")%>
+						</a>
+						<!-- 
+						<ul class="dropdown-menu">
+						<li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+						<li><a href="#"><i class="fa fa-gear"></i>Settings</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
+						</ul>
+						-->
+					</li>
+					<li class="divider-vertical"></li>
+					<li>
+						<form class="navbar-search">
+							<input type="text" placeholder="Search" class="form-control disabled" />
+						</form>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+</body>
+</html>
